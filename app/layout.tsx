@@ -29,12 +29,17 @@ const isV0 = process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Synecdoche®",
-    default: "Synecdoche®",
+    template: "%s | Water-IQ",
+    default: "Water-IQ",
   },
-  description:
-    "We stand at the forefront of a new era, where creativity meets technology to redefine what's possible. Our mission is to empower individuals and businesses alike with groundbreaking solutions that inspire change and drive progress.",
-    generator: 'v0.app'
+  description: "Water-IQ — smart water management.",
+  generator: 'v0.app',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 }
 
 export default function RootLayout({
