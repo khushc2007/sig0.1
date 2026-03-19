@@ -25,7 +25,7 @@ const VideoTransition = () => {
     const onEnded = () => {
       setFadeOut(true);
       setTimeout(() => {
-        window.location.href = "https://0-2-xi.vercel.app";
+        window.location.href = "/overalldis";
       }, 800);
     };
 
@@ -68,6 +68,15 @@ const VideoTransition = () => {
 
 export const Newsletter = () => {
   const [videoOpen, setVideoOpen] = useState(false);
+
+  useEffect(() => {
+    // Reset state if user navigates back (bfcache restore)
+    const handlePageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setVideoOpen(false);
+    };
+    window.addEventListener("pageshow", handlePageShow);
+    return () => window.removeEventListener("pageshow", handlePageShow);
+  }, []);
 
   return (
     <AnimatePresence mode="wait">

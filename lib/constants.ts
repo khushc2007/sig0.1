@@ -4,4 +4,5 @@ export const TABLES = {
 
 export const socialLinks = {
   github: "https://github.com/khushc2007",
+  website: "#", // replace with your URL
 };

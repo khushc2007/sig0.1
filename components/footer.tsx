@@ -1,4 +1,4 @@
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { socialLinks } from "@/lib/constants";
 import Link from "next/link";
@@ -9,6 +9,9 @@ export const Footer = () => {
       <span className="text-sm text-foreground/60">Developed by Khush</span>
       <Link target="_blank" className={buttonVariants({ size: "icon-xl" })} href={socialLinks.github}>
         <GitHubLogoIcon className="size-6" />
+      </Link>
+      <Link target="_blank" className={buttonVariants({ size: "icon-xl" })} href={socialLinks.website ?? "#"}>
+        <GlobeIcon className="size-6" />
       </Link>
     </div>
   );
