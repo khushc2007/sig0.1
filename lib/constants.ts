@@ -4,5 +4,5 @@ export const TABLES = {
 
 export const socialLinks = {
   github: "https://github.com/khushc2007",
-  website: "https://about-khush-1ycrpqqav-ddeh5x.vercel.app",
+  website: "https://about-khush-im4p23wb7-ddeh5x.vercel.app",
 };
